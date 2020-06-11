@@ -1,0 +1,5 @@
+{ 
+  "languages": "languages",
+  "available_times": "Available times",
+  "all_the_timings_listed_are_in_your_timezone": "All the timings listed are in your timezone: {{timezone}}"
+}

@@ -1,0 +1,34 @@
+version: '3.3'
+
+services:
+  calender-client:
+    image: calender
+    build:
+      context: .
+    environment:
+      - NODE_ENV=production
+      - REACT_APP_CLIENT_URL=${REACT_APP_CLIENT_URL}
+      - REACT_APP_CLIENT_PORT=${REACT_APP_CLIENT_PORT}
+      - REACT_APP_SERVER_URL=${REACT_APP_SERVER_URL}
+      - REACT_APP_SERVER_PORT=${REACT_APP_SERVER_PORT}
+    volumes:
+      - .:/app
+    ports:
+      - '3000:3000'
+    command: yarn prod:client
+    calender-server:
+    image: calender
+    environment:
+      - NODE_ENV=production
+      - REACT_APP_CLIENT_URL=${REACT_APP_CLIENT_URL}
+      - REACT_APP_CLIENT_PORT=${REACT_APP_CLIENT_PORT}
+      - REACT_APP_SERVER_URL=${REACT_APP_SERVER_URL}
+      - REACT_APP_SERVER_PORT=${REACT_APP_SERVER_PORT}
+    volumes:
+      - .:/app
+    ports:
+      - '4000:4000'
+    command: yarn prod:server
+
+
+    

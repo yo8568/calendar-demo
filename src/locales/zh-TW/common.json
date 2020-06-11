@@ -1,0 +1,5 @@
+{ 
+  "languages": "語言",
+  "available_times": "授課時間",
+  "all_the_timings_listed_are_in_your_timezone": "時間以 {{timezone}} 顯示"
+}

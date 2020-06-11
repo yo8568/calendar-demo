@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { ConnectedRouter } from 'connected-react-router'
+import { Switch, Route } from 'react-router-dom'
+import AvailableTimeCalendar from './pages/AvailableTimeCalendar'
+import { HistoryContext } from './history'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <HistoryContext.Provider value={this.props.history}>
+        <ConnectedRouter history={this.props.history}>
+          <Switch>
+            <Route path="/" exact component={AvailableTimeCalendar} />
+          </Switch>
+        </ConnectedRouter>
+      </HistoryContext.Provider>
+    )
+  }
 }
 
-export default App;
+App.propTypes = {
+  history: PropTypes.object
+}
+
+App.contextTypes = {
+  store: PropTypes.object
+}
+
+export default App
