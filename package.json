@@ -19,7 +19,7 @@
     "i18n-iso-countries": "^6.0.0",
     "i18next": "^19.4.5",
     "i18next-browser-languagedetector": "^4.2.0",
-    "moment": "^2.26.0",
+    "moment": "^2.29.2",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-document-title": "^2.0.3",
