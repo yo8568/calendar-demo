@@ -14,7 +14,7 @@
     "dotenv": "^8.2.0",
     "element-react": "^1.4.34",
     "element-theme-default": "^1.4.13",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "history": "^4.10.1",
     "i18n-iso-countries": "^6.0.0",
     "i18next": "^19.4.5",
